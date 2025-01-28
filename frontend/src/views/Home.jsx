@@ -5,10 +5,9 @@ function Home() {
     return (
         <div>
             <div className="home-box">
-                <h1 className="home-title">Welcome to My Portfolio</h1>
+                <h1 className="home-title">Welcome to our Portfolio!</h1>
                 <p className="home-subtitle">
-                    Explore projects and meet the contributors!
-                </p>
+                Lucas and Cornelia, the best of friends and soon one bachelors degree richer. Here they will take you through their software engineering journey thus far and hope that you will be a part of their upcoming tech adventures.                </p>
                 <div className="home-links">
                     <a href="/projects" className="home-link">Projects</a>
                     <a href="/cornelia" className="home-link">Cornelia's Page</a>
