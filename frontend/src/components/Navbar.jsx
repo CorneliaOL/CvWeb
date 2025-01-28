@@ -1,37 +1,26 @@
 import React, { useState } from "react";
-import "./Navbar.css";
-import { Link } from "react-router-dom";
+import "./Navbar.css"; // Ensure this file contains the above CSS
 
 function Navbar() {
-    const [menuOpen, setMenuOpen] = useState(false);
+    const [isDropdownVisible, setDropdownVisible] = useState(false);
 
-    const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
+    const toggleDropdown = () => {
+        setDropdownVisible(!isDropdownVisible);
     };
 
     return (
         <nav className="navbar">
             <div className="navbar-logo">
-                <Link to="/">MyWebsite</Link>
+                <a href="/">MyWebsite</a>
             </div>
-            {/* Menu Toggle Button (Visible on Small Screens) */}
-            <button className="menu-toggle" onClick={toggleMenu}>
-                {menuOpen ? "✖" : "☰"} {/* Show X for close, ☰ for open */}
+            <button className="menu-toggle" onClick={toggleDropdown}>
+                ☰
             </button>
-            {/* Links */}
-            <ul className={`navbar-links ${menuOpen ? "show" : ""}`}>
-                <li>
-                    <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
-                </li>
-                <li>
-                    <Link to="/Cornelia" onClick={() => setMenuOpen(false)}>Cornelia</Link>
-                </li>
-                <li>
-                    <Link to="/Lucas" onClick={() => setMenuOpen(false)}>Lucas</Link>
-                </li>
-                <li>
-                    <Link to="/projects" onClick={() => setMenuOpen(false)}>Projects</Link>
-                </li>
+            <ul className={`navbar-links ${isDropdownVisible ? "show" : ""}`}>
+                <li><a href="/">Home</a></li>
+                <li><a href="/cornelia">Cornelia</a></li>
+                <li><a href="/lucas">Lucas</a></li>
+                <li><a href="/projects">Projects</a></li>
             </ul>
         </nav>
     );

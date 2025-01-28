@@ -1,7 +1,8 @@
+/* Navbar container */
 .navbar {
     display: flex;
-    justify-content: space-between; /* Spread items across navbar */
-    align-items: center; /* Center items vertically */
+    justify-content: space-between;
+    align-items: center;
     background-color: #021232da; /* Dark background */
     color: white;
     padding: 1rem 2rem; /* Spacing around navbar */
@@ -12,45 +13,33 @@
     z-index: 1000; /* Ensure it's above other elements */
 }
 
+/* Logo link */
 .navbar-logo a {
-    color: rgba(255, 255, 255, 0.672); /* Logo color */
+    color: rgba(255, 255, 255, 0.85);
     font-size: 1.5rem; /* Font size */
     font-weight: bold;
     text-decoration: none;
 }
 
+/* Navbar links container */
 .navbar-links {
     list-style: none; /* Remove bullet points */
     display: flex; /* Horizontal layout for larger screens */
     gap: 1.5rem; /* Space between links */
     margin: 0;
     padding: 0;
+    transition: all 0.3s ease; /* Smooth transition */
 }
 
-.navbar-links li a {
-    color: rgba(255, 255, 255, 0.672); /* Link color */
-    text-decoration: none; /* Remove underline */
-    font-size: 1rem; /* Adjust font size as needed */
-    transition: color 0.3s ease; /* Smooth hover transition */
-}
-
-.navbar-links li a:hover {
-    color: rgba(255, 255, 255, 1); /* Full white on hover */
-}
-
-/* Hide the menu toggle button on larger screens */
+/* Menu toggle for smaller screens */
 .menu-toggle {
-    display: none;
+    display: none; /* Hide toggle on larger screens */
 }
 
-/* Responsive Styles for Smaller Screens */
+/* Responsive dropdown styles */
 @media (max-width: 768px) {
-    .navbar {
-        position: relative; /* Anchor for the absolute dropdown menu */
-    }
-
     .menu-toggle {
-        display: block; /* Show menu toggle button on smaller screens */
+        display: block; /* Show toggle on smaller screens */
         background: none;
         border: none;
         color: white;
@@ -59,29 +48,58 @@
     }
 
     .navbar-links {
-        position: absolute; /* Position relative to navbar */
-        top: 100%; /* Place below the navbar */
-        right: 0; /* Align to the right edge */
-        background-color: #1a202c; /* Same background as navbar */
-        list-style: none; /* Remove bullet points */
-        display: none; /* Hidden by default */
+        position: absolute;
+        top: 100%; /* Dropdown starts right below the navbar */
+        right: 10px; /* Add space from the edge */
+        background-color: rgba(2, 18, 50, 0.9); /* Less translucent background */
         flex-direction: column; /* Stack links vertically */
-        gap: 1rem; /* Add spacing between links */
-        padding: 1rem; /* Add padding inside the dropdown */
-        border-radius: 0 0 0.5rem 0.5rem; /* Optional: Round bottom corners */
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
-        z-index: 1000; /* Ensure it's above other elements */
+        gap: 1rem; /* Space between links */
+        padding: 1.5rem 2rem; /* Add more padding for breathing space */
+        border-radius: 0 0 0.5rem 0.5rem; /* Round the bottom corners */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        opacity: 0; /* Initially hidden */
+        transform: translateY(-10px); /* Slightly above its position */
+        pointer-events: none; /* Disable interactions initially */
+        transition: all 0.3s ease; /* Smooth animation */
+        z-index: 1000;
+        width: 200px; /* Wider dropdown */
     }
 
+    /* Show dropdown when active */
     .navbar-links.show {
-        display: flex; /* Show links when menu is toggled */
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Reset position */
+        pointer-events: auto; /* Enable interactions */
     }
+}
 
-    .navbar-links li a {
-        color: rgba(255, 255, 255, 0.672); /* Link color for dropdown */
-    }
+/* Navbar link styling */
+.navbar-links a {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease; /* Smooth hover effect */
+    padding: 0.5rem 0; /* Add padding for clickable area */
+    display: block; /* Block-level links for easy clicking */
+    text-align: center; /* Center-align text */
+}
 
-    .navbar-links li a:hover {
-        color: rgba(255, 255, 255, 1); /* Full white on hover */
+.navbar-links a:hover {
+    color: #66b3ff; /* Light blue on hover */
+}
+
+/* Add animation to the dropdown */
+@keyframes dropdown-slide {
+    from {
+        transform: translateY(-10px);
+        opacity: 0;
     }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.navbar-links.show {
+    animation: dropdown-slide 0.3s ease forwards; /* Play animation */
 }
