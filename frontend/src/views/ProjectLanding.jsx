@@ -24,27 +24,32 @@ function ProjectLanding() {
                     <div className="project-cards">
                         {projects.map((project) => (
                             <div className="card" key={project.id}>
-                                <h2 className="project-card-title">{project.name}</h2>
-                                <p className="project-card-description">{project.description}</p>
-                                
-                                <p className="project-card-authors">
-                                    <strong>Authors:</strong> {project.authors}
-                                </p>
-                                <p className="project-card-keywords">
-                                    <strong>Keywords:</strong> {project.keywords}
-                                </p>
-                                <a
-                                    href={project.git_link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="project-card-link"
-                                >
-                                    <img
-                                        src={githubLogo}
-                                        alt="GitHub Repository"
-                                        className="github-logo"
-                                    />
-                                </a>
+                                {project.name && <h2 className="project-card-title">{project.name}</h2>}
+                                {project.description && <p className="project-card-description">{project.description}</p>}
+                                {project.authors && (
+                                    <p className="project-card-authors">
+                                        <strong>Authors:</strong> {project.authors}
+                                    </p>
+                                )}
+                                {project.keywords && (
+                                    <p className="project-card-keywords">
+                                        <strong>Keywords:</strong> {project.keywords}
+                                    </p>
+                                )}
+                                {project.git_link && (
+                                    <a
+                                        href={project.git_link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="project-card-link"
+                                    >
+                                        <img
+                                            src={githubLogo}
+                                            alt="GitHub Repository"
+                                            className="github-logo"
+                                        />
+                                    </a>
+                            )}
                             </div>
                         ))}
                     </div>
