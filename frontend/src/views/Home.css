@@ -1,0 +1,78 @@
+/* Ensure no scrolling on the home page */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* Container for the home page */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center;
+    height: 100vh; /* Full viewport height */
+    background: linear-gradient(135deg, #1a202c, #2d3748); /* Sleek gradient */
+    color: white;
+    padding: 2rem; /* Adjust padding for top and bottom */
+    box-sizing: border-box;
+}
+
+/* Title styles */
+.home-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+/* Subtitle styles */
+.home-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: #cbd5e0; /* Light text color */
+}
+
+/* Links container */
+.home-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem; /* Spacing between links */
+}
+
+/* Link styles */
+.home-link {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #2b6cb0; /* Blue button background */
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 8px; /* Rounded corners */
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Hover effect for links */
+.home-link:hover {
+    background-color: #2c5282; /* Darker blue on hover */
+    transform: translateY(-3px); /* Lift on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .home-title {
+        font-size: 2.5rem;
+    }
+
+    .home-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .home-link {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+}

@@ -1,0 +1,87 @@
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Spread items across navbar */
+    align-items: center; /* Center items vertically */
+    background-color: #021232da; /* Dark background */
+    color: white;
+    padding: 1rem 2rem; /* Spacing around navbar */
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Include padding in width calculations */
+    position: sticky; /* Stick navbar to the top */
+    top: 0;
+    z-index: 1000; /* Ensure it's above other elements */
+}
+
+.navbar-logo a {
+    color: rgba(255, 255, 255, 0.672); /* Logo color */
+    font-size: 1.5rem; /* Font size */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar-links {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Horizontal layout for larger screens */
+    gap: 1.5rem; /* Space between links */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li a {
+    color: rgba(255, 255, 255, 0.672); /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-size: 1rem; /* Adjust font size as needed */
+    transition: color 0.3s ease; /* Smooth hover transition */
+}
+
+.navbar-links li a:hover {
+    color: rgba(255, 255, 255, 1); /* Full white on hover */
+}
+
+/* Hide the menu toggle button on larger screens */
+.menu-toggle {
+    display: none;
+}
+
+/* Responsive Styles for Smaller Screens */
+@media (max-width: 768px) {
+    .navbar {
+        position: relative; /* Anchor for the absolute dropdown menu */
+    }
+
+    .menu-toggle {
+        display: block; /* Show menu toggle button on smaller screens */
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    .navbar-links {
+        position: absolute; /* Position relative to navbar */
+        top: 100%; /* Place below the navbar */
+        right: 0; /* Align to the right edge */
+        background-color: #1a202c; /* Same background as navbar */
+        list-style: none; /* Remove bullet points */
+        display: none; /* Hidden by default */
+        flex-direction: column; /* Stack links vertically */
+        gap: 1rem; /* Add spacing between links */
+        padding: 1rem; /* Add padding inside the dropdown */
+        border-radius: 0 0 0.5rem 0.5rem; /* Optional: Round bottom corners */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+        z-index: 1000; /* Ensure it's above other elements */
+    }
+
+    .navbar-links.show {
+        display: flex; /* Show links when menu is toggled */
+    }
+
+    .navbar-links li a {
+        color: rgba(255, 255, 255, 0.672); /* Link color for dropdown */
+    }
+
+    .navbar-links li a:hover {
+        color: rgba(255, 255, 255, 1); /* Full white on hover */
+    }
+}

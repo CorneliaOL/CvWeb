@@ -1,0 +1,145 @@
+/* Ensure the body and root fill the viewport without gaps */
+html, body, #root {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Container for the entire ProjectLanding component */
+.project-landing {
+    position: relative;
+    min-height: 100vh;
+    background: url("../assets/hassaan-here-O8s_2_pEISg-unsplash.jpg") no-repeat center center/cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 4rem 1rem;
+    overflow-y: auto;
+    z-index: -1;
+}
+
+.project-landing-overlay {
+    position: relative;
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 1200px;
+    width: calc(100% - 2rem);
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    color: white;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .project-landing-overlay {
+        width: calc(100% - 2rem);
+        padding: 1rem;
+        margin: 1rem auto;
+    }
+}
+
+/* Center the title */
+.project-landing-title {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Grid layout for project cards */
+.project-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Professional styling for individual project cards */
+.project-card {
+    background: linear-gradient(135deg, #ffffff, #f8f9fa); /* Subtle gradient */
+    color: #333;
+    padding: 1.5rem;
+    border-radius: 15px; /* Smooth rounded corners */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Clean shadow */
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 300px;
+    width: 100%;
+}
+
+/* Hover effects for cards */
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Content inside the cards */
+.project-card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #212529; /* Darker text for titles */
+    text-align: center;
+}
+
+.project-card-description {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #495057; /* Muted text for descriptions */
+    text-align: justify;
+}
+
+.project-card-authors,
+.project-card-keywords {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    color: #6c757d;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .project-card {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .project-card-title {
+        font-size: 1.3rem;
+    }
+
+    .project-card-description {
+        font-size: 0.95rem;
+    }
+}
+.project-card-link {
+    display: inline-flex; /* Ensures proper alignment of the link and logo */
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; /* Ensures the cursor changes to a pointer */
+}
+
+.project-card-link img {
+    width: 24px; /* Adjust size to fit design */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 8px; /* Space between logo and text, if any */
+    cursor: pointer; /* Ensures pointer cursor on the image */
+}
+
+.github-logo {
+    width: 32px; /* Adjust size */
+    height: 32px; /* Ensure consistent height */
+    display: block; /* Ensure the image fills the space */
+    cursor: pointer; /* Show pointer cursor on hover */
+}
+
+
+.github-logo:hover {
+    transform: scale(1.1); /* Slightly enlarge the logo on hover */
+}
