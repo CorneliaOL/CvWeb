@@ -1,0 +1,233 @@
+/* Global styles */
+html, body, #root {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  /* Default background for Home and Projects */
+  .app-container.default-bg,
+  .app-container.projects-bg {
+    background: url('./assets/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+  
+  .cornelia-section h2 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+
+
+  /* Cornelia Page Background */
+.app-container.cornelia-bg {
+    background: url('../assets/more_blurred_background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+  
+  /* Lucas Page Background */
+  .app-container.lucas-bg {
+    background: url('../assets/LucasBG.png') no-repeat center center fixed;
+    background-size: cover;    
+  }
+  
+  /* Ensure the app container is tall enough for scrolling */
+  .app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Ensure content takes full height */
+  .app-main {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    z-index: 1000;
+  }
+  
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-links a:hover {
+    color: #2b6bb0;
+  }
+  
+  /* Title styles */
+  .home-title, .cornelia-title, .lucas-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: #ffffff; /* Light text color */
+  }
+  
+  /* Cornelia Page Styling */
+ /* Cornelia Container Styles */
+.cornelia-container {
+    max-width: 800px;
+    width: 100%;
+    background-color: rgba(255, 192, 203, 0.2); /* Light pink background */
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin: 2rem auto;
+    text-align: center;
+    color: #fff;
+  }
+
+  .lucas-container {
+    max-width: 800px;
+    width: 100%;
+    background-color: rgba(237, 192, 255, 0.2); /* Light pink background */
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin: 2rem auto;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .cornelia-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 1rem;
+    object-fit: cover;
+  }
+  
+/* Cornelia Experiences and Projects Styling */
+.cornelia-experiences, .cornelia-projects {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 800px;
+    margin: 2rem auto; /* Add vertical margin for spacing */
+    color: #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .cornelia-experiences, .cornelia-projects {
+        width: 95%;
+        padding: 1rem;
+        margin: 1.5rem auto; /* Adjust margin for smaller screens */
+    }
+}
+
+  
+  .cornelia-experiences h2, .cornelia-projects h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .cornelia-projects a.project-link {
+    color: #ff69b4;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  
+  /* Lucas Page Styling */
+  .lucas-container {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .lucas-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 1rem;
+    object-fit: cover;
+  }
+  
+  .lucas-experiences, .lucas-projects {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 800px;
+    margin-bottom: 2rem;
+    color: #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .lucas-experiences h2, .lucas-projects h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .lucas-projects a.project-link {
+    color: #32cd32;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .cornelia-photo,
+    .lucas-photo {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .cornelia-experiences, .lucas-experiences,
+    .cornelia-projects, .lucas-projects {
+      width: 95%;
+      padding: 1rem;
+    }
+  }
+
+
+  .timeline-cornelia .vertical-timeline-element-content {
+    background-color: rgba(255, 192, 203, 0.2) !important; /* Light pink background */
+    color: #333;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-cornelia .vertical-timeline-element-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.timeline-cornelia .vertical-timeline-element-icon {
+    background: rgba(50, 9, 27, 0.687) !important; /* Hot pink */
+}
+
+.timeline-cornelia .vertical-timeline::before {
+    background: linear-gradient(to bottom, #ff69b4, #ffb6c1); /* Pink gradient */
+}
+

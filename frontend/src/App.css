@@ -1,30 +1,50 @@
-/* Ensure the body and root fill the viewport without gaps */
+/* Global styles */
 html, body, #root {
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
-  overflow-x: hidden;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  background: url('./assets/background.jpg') no-repeat center center/cover; /* Global background */
+  background-attachment: fixed; /* Fixed effect */
+  background-size: cover;
+} 
+
+
+
+/* Persistent global background */
+.app-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('./assets/background.jpg') no-repeat center center/cover;
+  background-attachment: fixed;
+  z-index: -1; /* Keep it behind all content */
+  overflow: hidden; /* Prevent scrollbars */
 }
 
-/* Global container for the application */
+
+
+
+/* Ensure the app container is tall enough for scrolling */
 .app {
-  min-height: 100vh;
-  background: url("./assets/background.jpg") no-repeat center center/cover;
+  min-height: 200vh; /* Increase height to allow scrolling */
   background-attachment: fixed;
   display: flex;
   flex-direction: column;
 }
 
-/* Main content area */
+/* Ensure content takes full height */
 .app-main {
   flex: 1;
-  overflow-y: auto;
   padding: 2rem;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
+
 
 /* Styling for the ProjectLanding container */
 .project-landing {
@@ -226,4 +246,42 @@ html, body {
       font-size: 0.9rem;
       padding: 0.7rem 1rem;
   }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto; /* Allow scrolling */
+}
+
+/* Ensure content is tall enough for scrolling */
+.home-container {
+  min-height: 200vh; /* Ensure enough space */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Default: Small screens (mobile) */
+.spacer {
+  height: 0vh; /* No extra space on small screens */
+}
+
+/* Large screens (tablets & desktops) */
+@media (min-width: 1024px) {
+  .spacer {
+      height: 30vh; /* Add space to allow scrolling */
+  }
+}
+
+
+/* Timeline Wrapper */
+.timeline-wrapper {
+  min-height: 100vh; /* Ensure space for the timeline */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

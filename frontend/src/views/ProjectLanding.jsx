@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import githubLogo from "../assets/github-logo.png";
+import { motion } from "framer-motion";
+
 
 function ProjectLanding() {
     const [projects, setProjects] = useState([]);
@@ -17,7 +19,14 @@ function ProjectLanding() {
     }, []);
 
     return (
+        
         <div className="project-landing">
+            <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: 50 }}
+            transition={{ duration: 0.3 }}
+        >
             <div className="project-landing-overlay">
                 <h1 className="project-landing-title">Projects</h1>
                 {projects.length > 0 ? (
@@ -57,6 +66,7 @@ function ProjectLanding() {
                     <p className="project-landing-message">No projects available</p>
                 )}
             </div>
+            </motion.div>
         </div>
     );
 }

@@ -13,6 +13,13 @@
     z-index: 1000; /* Ensure it's above other elements */
 }
 
+
+/* Change Navbar Color When on Cornelia's Page */
+.cornelia-navbar {
+    background-color: rgba(50, 9, 27, 0.687); /* Blue color for Cornelia page */
+}
+
+
 /* Logo link */
 .navbar-logo a {
     color: rgba(255, 255, 255, 0.85);

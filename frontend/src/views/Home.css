@@ -3,7 +3,8 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow: hidden; /* Prevent scrolling */
+    overflow-x: hidden; /* Keep horizontal scrolling disabled */
+    overflow-y: auto; /* Allow vertical scrolling */
 }
 
 /* Container for the home page */
@@ -74,5 +75,133 @@ body, html {
     .home-link {
         font-size: 1rem;
         padding: 0.8rem 1.5rem;
+    }
+}
+/* Pulsing Down Arrow */
+.scroll-down-arrow {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    animation: pulse 1.5s infinite;
+    cursor: pointer;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+/* Timeline Styling */
+.timeline-container {
+    margin-top: 50px;
+    padding: 20px;
+}
+.timeline-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 100px auto; /* Add space so it appears on scroll */
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.timeline-wrapper {
+    min-height: 100vh; /* Ensure there's space to scroll into */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ensure the timeline becomes visible when it enters the viewport */
+.timeline-container.in-view {
+    opacity: 1;
+}
+
+/* Timeline container for Home page */
+.timeline-home .vertical-timeline {
+    margin-top: 10px;
+}
+
+/* Content alignment for Home page */
+.timeline-home .vertical-timeline-element-content {
+    margin-left: 70px; /* Ensure space between the icon and the content box */
+    padding: 1.5rem;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.7); /* Matches your theme */
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+    .timeline-home .vertical-timeline-element-content {
+        margin-left: 50px; /* Reduced spacing for smaller screens */
+    }
+}
+
+/* Timeline date for Home page - Default for larger screens */
+.timeline-home .vertical-timeline-element-date {
+    position: absolute;
+    left: 120%; /* Default distance to the right of the icon */
+    top: 50%; /* Center vertically with the icon */
+    transform: translateY(-50%); /* Adjust vertical alignment */
+    color: rgba(255, 255, 255, 0.8) !important; /* Light gray date */
+    font-size: 1rem;
+    white-space: nowrap; /* Prevent wrapping */
+}
+
+/* Timeline date for screens smaller than 12 inches */
+@media (max-width: 1024px) {
+    .timeline-home .vertical-timeline-element-date {
+        position: relative; /* Move position to be inside the box */
+        left: 0; /* Reset left alignment */
+        top: auto; /* Reset top alignment */
+        transform: none; /* Remove transform adjustments */
+        margin-top: 10px; /* Add spacing from content above */
+        font-size: 0.9rem; /* Slightly smaller font size */
+        text-align: right; /* Align date to the right inside the box */
+    }
+}
+
+/* For very small screens (e.g., less than 5 inches) */
+@media (max-width: 480px) {
+    .timeline-home .vertical-timeline-element-date {
+        font-size: 0.8rem; /* Further reduce font size */
+        margin-top: 5px; /* Smaller margin */
+        text-align: center; /* Center-align for better visibility */
+    }
+}
+
+/* Title inside timeline card for Home page */
+.timeline-home .vertical-timeline-element-title {
+    color: rgba(255, 255, 255, 0.813) !important; /* White title */
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+/* Description text for Home page */
+.timeline-home .vertical-timeline-element-content p {
+    color: rgba(255, 255, 255, 0.8) !important; /* Slightly muted text */
+    font-size: 1rem;
+}
+
+/* Timeline icons for Home page */
+.timeline-home .vertical-timeline-element-icon {
+    background: #670448da !important; /* Blue background */
+    color: #fff !important;
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Arrow connecting timeline items for Home page */
+.timeline-home .vertical-timeline::before {
+    background: rgba(255, 255, 255, 0.3) !important; /* Lightened timeline line */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .timeline-home .vertical-timeline-element-content {
+        padding: 15px;
+    }
+    .timeline-home .vertical-timeline-element-title {
+        font-size: 1.2rem;
     }
 }
