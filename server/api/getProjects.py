@@ -100,7 +100,6 @@ def getDescription(readme):
 def getAuthors(readme):
     authors = getText(readme, "## Authors", "#")
     splitAuthors = authors.split("\n")
-    del splitAuthors[0]
 
     displayString = ""
     marker = "<!-- x -->"
@@ -112,7 +111,7 @@ def getAuthors(readme):
 
     #Ignore last index to remove trailing comma
     displayString = displayString.strip()[0:len(displayString)-2] 
-    print(displayString)
+    # print(displayString)
     return displayString
 
 def getText(text, start, end):
