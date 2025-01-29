@@ -2,4 +2,8 @@ Title: First character must be # and then title, which must be ended with \n
 
 Description: Has to be on the form "## Description" for now, later to be changed to TLDR, will read to the next #, so they cannot be present in the description itslef
 
+Git link: If git link is changed the webpage will not detect that
+
+Authors: Mark authors with the <!-- x --> comment, must be under ## Authors
+
 

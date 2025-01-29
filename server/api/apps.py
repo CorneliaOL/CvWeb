@@ -17,7 +17,7 @@ class ApiConfig(AppConfig):
             from api.getProjects import loadFromGit
             while True:
                 loadFromGit()
-                time.sleep(10)
+                time.sleep(60)
 
         thread = threading.Thread(target=task, daemon=True)
         thread.start()

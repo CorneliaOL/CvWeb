@@ -9,5 +9,5 @@ class ProjectSerializer(serializers.ModelSerializer):
 class PersonSerializer(serializers.ModelSerializer):
     class Meta:
         model = Person
-        fields = ['gitName',]
+        fields = ['gitName', 'name']
 
