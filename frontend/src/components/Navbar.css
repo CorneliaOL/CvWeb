@@ -12,12 +12,16 @@
     top: 0;
     z-index: 1000; /* Ensure it's above other elements */
 }
-
-
-/* Change Navbar Color When on Cornelia's Page */
-.cornelia-navbar {
-    background-color: rgba(50, 9, 27, 0.687); /* Blue color for Cornelia page */
-}
+  
+  /* Navbar for Cornelia's page */
+  .cornelia-navbar {
+    background-color:rgba(50, 9, 27, 0.687); /* A distinct purple shade */
+  }
+  
+  /* Navbar for Lucas's page */
+  .lucas-navbar {
+    background-color: #2b6bb092; /* A distinct blue shade */
+  }
 
 
 /* Logo link */

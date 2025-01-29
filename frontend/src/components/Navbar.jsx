@@ -10,11 +10,19 @@ function Navbar() {
         setDropdownVisible(!isDropdownVisible);
     };
 
-    // Add a dynamic class for Cornelia page
-    const isCorneliaPage = location.pathname === "/cornelia";
+    // Determine if it's Cornelia's or Lucas's page
+    const isCorneliaPage = location.pathname.toLowerCase() === "/cornelia";
+    const isLucasPage = location.pathname.toLowerCase() === "/lucas";
+
+    // Set dynamic classes based on the current route
+    const dynamicClass = isCorneliaPage
+        ? "cornelia-navbar"
+        : isLucasPage
+        ? "lucas-navbar"
+        : "";
 
     return (
-        <nav className={`navbar ${isCorneliaPage ? "cornelia-navbar" : ""}`}>
+        <nav className={`navbar ${dynamicClass}`}>
             <div className="navbar-logo">
                 <Link to="/">MyWebsite</Link> {/* Use Link instead of <a> */}
             </div>
