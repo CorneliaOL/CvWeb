@@ -87,34 +87,25 @@ def getProj(user):
     return jsonReadme
 
 def getTitle(readme):
-    if readme[0] != '#': #If first character is not #, return empty
-        return ""
-
-    result = getText(readme, "# ", "\n")
-
-    if result[0] == '!': # If first line is an image, return empty
-        return ""
-    return result
+    title = getText(readme, "<!-- Title -->", "<!-- /Title -->")
+    return title.strip()
 
 def getDescription(readme):
-    return getText(readme, "## Description", "#")
+    description = getText(readme, "<!-- Description -->", "<!-- /Description -->")
+    return description.strip()
 
 def getAuthors(readme):
-    authors = getText(readme, "## Authors", "#")
-    splitAuthors = authors.split("\n")
+    section = getText(readme, "<!-- Authors -->", "<!-- /Authors -->")
+    
+    splitSection = section.split("\n")
+    splitSection = list(map(lambda x: x.replace("- ", "").strip(), splitSection))
 
-    displayString = ""
-    marker = "<!-- x -->"
-    for name in splitAuthors:
-        if marker in name:
-            replaceName = name.replace(marker, "")
-            finalName = replaceName.replace("-", "").strip()
-            displayString = displayString + finalName + ", "
 
-    #Ignore last index to remove trailing comma
-    displayString = displayString.strip()[0:len(displayString)-2] 
-    # print(displayString)
-    return displayString
+    separator = ", "
+    
+    authors = separator.join(splitSection)
+        
+    return authors
 
 def getKeywords(readme):
     section = getText(readme, "<!-- Keywords -->", "<!-- /Keywords -->")

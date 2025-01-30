@@ -1,9 +1,13 @@
-Title: First character must be # and then title, which must be ended with \n
+Everything: Mark the part of the readme you want to take with the field name, e.g. <!-- Description --> <!-- /Description -->
 
-Description: Has to be on the form "## Description" for now, later to be changed to TLDR, will read to the next #, so they cannot be present in the description itslef
+Title: On the title line as such: <!-- Title --> *Title* <!-- /Title -->
+
+Description: See above
 
 Git link: If git link is changed the webpage will not detect that
 
-Authors: Mark authors with the <!-- x --> comment, must be under ## Authors
+Authors: The authors to be used must be at the top, else the readme will have a space where the authors tag is inserted
+
+Keywords: Add keywords in - [item] format between <!-- Keyword --> <!-- /Keyword --> tag, no extra spaces and keywords should be separated with \n
 
 
