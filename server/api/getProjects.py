@@ -44,7 +44,9 @@ def saveRepo(repo):
             defaults={
                 "name": repo["name"],
                 "description": repo["description"],
-                "authors": repo["authors"]
+                "authors": repo["authors"],
+                "keywords": repo["keywords"]
+
             })
         project.save()
     else :
@@ -114,6 +116,20 @@ def getAuthors(readme):
     # print(displayString)
     return displayString
 
+def getKeywords(readme):
+    section = getText(readme, "<!-- Keywords -->", "<!-- /Keywords -->")
+    
+    splitSection = section.split("\n")
+    splitSection = list(map(lambda x: x.replace("- ", "").strip(), splitSection))
+
+
+    separator = ", "
+    
+    keywords = separator.join(splitSection)
+        
+    return keywords
+
+
 def getText(text, start, end):
     init_index = text.find(start)
 
@@ -138,7 +154,8 @@ def reduceJson(acc, curr):
             "description": getDescription(readme),
             "readme": readme,
             "git_link": gitLink,
-            "authors": getAuthors(readme)
+            "authors": getAuthors(readme),
+            "keywords": getKeywords(readme)
         }
         acc["repos"].append(repoJson)
         return acc
