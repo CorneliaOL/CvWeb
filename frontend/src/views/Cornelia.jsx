@@ -104,16 +104,6 @@ const timelineData = [
         icon: <FaProjectDiagram />,  // Project / Internship
         iconColor: "#90ee90",
         link: "https://example.com/bambai-project",
-    },
-    {
-        date: "2022 - 2025",
-        title: "Bachelor Thesis",
-        subtitle: "AI-Powered Food Waste Reduction Tool",
-        description:
-            "Developing BambAI, a tool to help school restaurants analyze, predict, and reduce food waste using AI models.",
-        icon: <FaProjectDiagram />,  // Project / Research
-        iconColor: "#90ee90",
-        link: "https://example.com/bambai-project",
     }
 ];
 
