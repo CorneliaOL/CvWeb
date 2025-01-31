@@ -88,6 +88,14 @@ const timelineData = [
         link: "https://example.com/bambai-project",
     },
     {
+        date: "Aug-Nov 2024",
+        title: "Teaching Assistant",
+        subtitle: "Fundamentals of Software Architecture",
+        description: "I worked as a teching assistant for the course Fundamentals of Software Architecture. My tasks included grading assignments and having weekly meetings with groups of students.",
+        icon: <FaBriefcase />,
+        iconColor: "#32cd32",
+    },
+    {
         date: "Winter '23",
         title: "AI project",
         subtitle: "15hp project in school",
