@@ -7,8 +7,6 @@
 This repository contains the source code for a portfolio website showcasing the work and achievements of Cornelia Olofsson and Lucas, final-year Software Engineering and Management students at the University of Gothenburg. The website features a timeline of their learning journey, projects, and links to their social profiles.
 <!-- /Description -->
 
-<!-- Git Link --> https://github.com/your-repo-name <!-- /Git Link -->
-
 ## Authors
 <!-- Authors -->
 - Cornelia Olofsson
