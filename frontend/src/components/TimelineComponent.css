@@ -16,7 +16,15 @@
 }
 }
 
-
+/* Subtitle styling for timeline cards */
+.vertical-timeline-element-subtitle {
+    font-size: 1rem; /* Slightly smaller than the title */
+    color: rgba(197, 11, 11, 0.6) !important; /* Muted white for subtle effect */
+    margin-top: 0.5rem; /* Space between title and subtitle */
+    margin-bottom: 1rem; /* Space before content */
+    font-style: italic; /* Adds a refined touch */
+    line-height: 1.4; /* Improves readability */
+}
 /* Content alignment */
 .vertical-timeline-element-content {
     margin-left: 70px; /* Ensure space between the icon and the content box */
@@ -57,6 +65,8 @@
         font-size: 1.2rem;
     }
 }
+
+
 
 /* Timeline date - Default for larger screens */
 .vertical-timeline-element-date {

@@ -1,15 +1,6 @@
-/* Global styles */
-html, body, #root {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    overflow-x: hidden;
-  }
-  
+
   /* Default background for Home and Projects */
-  .app-container.default-bg,
-  .app-container.projects-bg {
+  .app-container.default-bg {
     background: url('./assets/background.jpg') no-repeat center center fixed;
     background-size: cover;
   }
@@ -21,11 +12,16 @@ html, body, #root {
     font-size: 2rem;
 }
 
+.lucas-section h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 2rem;
+}
 
 
   /* Cornelia Page Background */
 .app-container.cornelia-bg {
-    background: url('../assets/more_blurred_background.jpg') no-repeat center center fixed;
+    background: url('../assets/corneliaBG.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -35,50 +31,7 @@ html, body, #root {
     background: url('../assets/LucasBG.png') no-repeat center center fixed;
     background-size: cover;    
   }
-  
-  /* Ensure the app container is tall enough for scrolling */
-  .app {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* Ensure content takes full height */
-  .app-main {
-    flex: 1;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  /* Navbar Styles */
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    z-index: 1000;
-  }
-  
-  .navbar-links {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .navbar-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-  }
-  
-  .navbar-links a:hover {
-    color: #2b6bb0;
-  }
+
   
   /* Title styles */
   .home-title, .cornelia-title, .lucas-title {
@@ -218,7 +171,27 @@ html, body, #root {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.timeline-lucas .vertical-timeline-element-content {
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-home .vertical-timeline-element-content {
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
 .timeline-cornelia .vertical-timeline-element-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+.timeline-lucas .vertical-timeline-element-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+.timeline-home .vertical-timeline-element-content:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
@@ -231,3 +204,39 @@ html, body, #root {
     background: linear-gradient(to bottom, #ff69b4, #ffb6c1); /* Pink gradient */
 }
 
+
+/* Social links container */
+.cornelia-social-links {
+  display: flex; /* Align items horizontally */
+  gap: 1rem; /* Add spacing between the logos */
+  justify-content: center; /* Center the icons horizontally */
+  margin-top: 1rem; /* Add spacing from the subtitle */
+}
+
+/* Logo styles */
+.social-logo {
+  width: 40px; /* Adjust the size of the icons */
+  height: 40px; /* Ensure consistent height */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+  cursor: pointer;
+}
+
+/* Hover effect for logos */
+.social-logo:hover {
+  transform: scale(1.1); /* Slightly enlarge the logo on hover */
+}
+
+
+
+
+
+
+.github-logo {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.2s ease;
+}
+
+.github-logo:hover {
+  transform: scale(1.1);
+}

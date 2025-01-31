@@ -22,6 +22,9 @@ const TimelineComponent = ({ timelineData }) => {
                     icon={item.icon}
                 >
                     <h3 className="vertical-timeline-element-title">{item.title}</h3>
+                    {item.subtitle && (
+                                <p className="vertical-timeline-element-subtitle">{item.subtitle}</p>
+                            )}
                     <p>{item.description}</p>
                 </VerticalTimelineElement>
             ))}

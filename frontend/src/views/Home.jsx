@@ -106,7 +106,7 @@ function Home() {
             className="home-container"
         >
             <div className="home-box">
-                <h1 className="home-title">Welcome to My Portfolio</h1>
+                <h1 className="home-title">Welcome to our Portfolio</h1>
                 <p className="home-subtitle">
                     Lucas and Cornelia, the best of friends and soon one bachelor's degree richer. Here they will take you through their software engineering journey thus far and hope that you will be a part of their upcoming tech adventures.
                 </p>

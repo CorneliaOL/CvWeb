@@ -13,13 +13,17 @@ function Navbar() {
     // Determine if it's Cornelia's or Lucas's page
     const isCorneliaPage = location.pathname.toLowerCase() === "/cornelia";
     const isLucasPage = location.pathname.toLowerCase() === "/lucas";
+    const isProjectPage = location.pathname.toLowerCase() === "/projects";
+
 
     // Set dynamic classes based on the current route
     const dynamicClass = isCorneliaPage
         ? "cornelia-navbar"
         : isLucasPage
         ? "lucas-navbar"
-        : "";
+        : isProjectPage
+        ? "project-navbar"
+        :"";
 
     return (
         <nav className={`navbar ${dynamicClass}`}>
