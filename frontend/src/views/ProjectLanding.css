@@ -1,0 +1,111 @@
+.app-container.projects-bg {
+    background: url('../assets/ProjectsBG.jpg') no-repeat center center fixed;
+    background-size: cover; 
+}
+
+
+
+/* Scrollable container for the entire page */
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh; /* Fill the viewport height */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Hide scrollbar */
+.landing-container::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* Header section */
+.landing-header {
+    text-align: center;
+    margin-bottom: 20px;
+    flex-shrink: 0; /* Prevents header from shrinking */
+}
+
+.landing-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.landing-subtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Main content (scrollable) */
+.landing-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex-grow: 1; /* Makes the content take available space */
+    padding-bottom: 200px; /* Adds extra space for scrolling */
+}
+
+/* Project cards */
+.project-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Project name */
+.project-name {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+/* Project description */
+.project-description {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 10px;
+}
+
+/* Project authors */
+.project-authors {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* GitHub link */
+.project-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.github-logo {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.2s ease;
+}
+
+.github-logo:hover {
+    transform: scale(1.1);
+}
+
+/* No projects message */
+.no-projects-message {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.2rem;
+}
+

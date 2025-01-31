@@ -426,3 +426,5 @@ pyvenv.cfg
 pip-selfcheck.json
 
 # End of https://www.toptal.com/developers/gitignore/api/venv,python,react,django,node
+package.json
+package-lock.json

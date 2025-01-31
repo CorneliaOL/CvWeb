@@ -1,0 +1,120 @@
+/* Navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #021232da; /* Dark background */
+    color: white;
+    padding: 1rem 2rem; /* Spacing around navbar */
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Include padding in width calculations */
+    position: sticky; /* Stick navbar to the top */
+    top: 0;
+    z-index: 1000; /* Ensure it's above other elements */
+}
+  
+  /* Navbar for Cornelia's page */
+  .cornelia-navbar {
+    background-color:rgba(50, 9, 27, 0.687); /* A distinct purple shade */
+  }
+  
+  /* Navbar for Lucas's page */
+  .lucas-navbar {
+    background-color: #2b6bb092; /* A distinct blue shade */
+  }
+
+  /* Navbar for Lucas's page */
+  .project-navbar {
+    background-color: #15332b89; /* A distinct blue shade */
+  }
+
+/* Logo link */
+.navbar-logo a {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.5rem; /* Font size */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Navbar links container */
+.navbar-links {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Horizontal layout for larger screens */
+    gap: 1.5rem; /* Space between links */
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Menu toggle for smaller screens */
+.menu-toggle {
+    display: none; /* Hide toggle on larger screens */
+}
+
+/* Responsive dropdown styles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show toggle on smaller screens */
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    .navbar-links {
+        position: absolute;
+        top: 100%; /* Dropdown starts right below the navbar */
+        right: 10px; /* Add space from the edge */
+        background-color: rgba(2, 18, 50, 0.9); /* Less translucent background */
+        flex-direction: column; /* Stack links vertically */
+        gap: 1rem; /* Space between links */
+        padding: 1.5rem 2rem; /* Add more padding for breathing space */
+        border-radius: 0 0 0.5rem 0.5rem; /* Round the bottom corners */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        opacity: 0; /* Initially hidden */
+        transform: translateY(-10px); /* Slightly above its position */
+        pointer-events: none; /* Disable interactions initially */
+        transition: all 0.3s ease; /* Smooth animation */
+        z-index: 1000;
+        width: 200px; /* Wider dropdown */
+    }
+
+    /* Show dropdown when active */
+    .navbar-links.show {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Reset position */
+        pointer-events: auto; /* Enable interactions */
+    }
+}
+
+/* Navbar link styling */
+.navbar-links a {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease; /* Smooth hover effect */
+    padding: 0.5rem 0; /* Add padding for clickable area */
+    display: block; /* Block-level links for easy clicking */
+    text-align: center; /* Center-align text */
+}
+
+.navbar-links a:hover {
+    color: #66b3ff; /* Light blue on hover */
+}
+
+/* Add animation to the dropdown */
+@keyframes dropdown-slide {
+    from {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.navbar-links.show {
+    animation: dropdown-slide 0.3s ease forwards; /* Play animation */
+}
