@@ -46,6 +46,9 @@ function ProjectLanding() {
                                     <strong>Authors:</strong> {project.authors}
                                 </p>
                             )}
+                            {project.keywords && (
+                                <p className="project-authors"><strong>Keywords: </strong>{project.keywords}</p>
+                            )}
                             {project.git_link && (
                                 <a
                                     href={project.git_link}
