@@ -10,8 +10,7 @@ run pip install -r requirments.txt
 COPY . /app/
 
 # Run migrations and create a superuser
-RUN python manage.py migrate && \
-    python manage.py createsuperuser --noinput || true
+RUN python manage.py migrate
 
 EXPOSE 8000
 
