@@ -9,8 +9,8 @@ This repository contains the source code for a portfolio website showcasing the 
 
 ## Authors
 <!-- Authors -->
-- Cornelia Olofsson
-- Lucas
+- Cornelia Olofsson Larsson
+- Lucas Carlsson Holter
 <!-- /Authors -->
 
 
