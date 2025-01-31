@@ -65,8 +65,8 @@ This repository contains the source code for a portfolio website showcasing the 
 
 ## Keywords
 <!-- Keywords -->
-- [React]
-- [Django]
+- React
+- Django
 - Kubernetes
 - Web design
 
