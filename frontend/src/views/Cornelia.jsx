@@ -88,22 +88,20 @@ const timelineData = [
         link: "https://example.com/bambai-project",
     },
     {
+        date: "Aug-Nov 2024",
+        title: "Teaching Assistant",
+        subtitle: "Fundamentals of Software Architecture",
+        description: "I worked as a teching assistant for the course Fundamentals of Software Architecture. My tasks included grading assignments and having weekly meetings with groups of students.",
+        icon: <FaBriefcase />,
+        iconColor: "#32cd32",
+    },
+    {
         date: "Winter '23",
         title: "AI project",
         subtitle: "15hp project in school",
         description:
             "Developed a restaurant recommender system as a web site. Deployed on kubernetes with frontend, backend and ML model as a separate service.",
         icon: <FaProjectDiagram />,  // Project / Internship
-        iconColor: "#90ee90",
-        link: "https://example.com/bambai-project",
-    },
-    {
-        date: "2022 - 2025",
-        title: "Bachelor Thesis",
-        subtitle: "AI-Powered Food Waste Reduction Tool",
-        description:
-            "Developing BambAI, a tool to help school restaurants analyze, predict, and reduce food waste using AI models.",
-        icon: <FaProjectDiagram />,  // Project / Research
         iconColor: "#90ee90",
         link: "https://example.com/bambai-project",
     }

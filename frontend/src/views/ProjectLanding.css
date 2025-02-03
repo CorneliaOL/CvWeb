@@ -1,5 +1,5 @@
 .app-container.projects-bg {
-    background: url('../assets/ProjectsBG.jpg') no-repeat center center fixed;
+    background: url('../assets/ProjectsBG.jpg') repeat-y center center/cover;
     background-size: cover; 
 }
 
@@ -51,7 +51,7 @@
 
 /* Project cards */
 .project-card {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(56, 56, 56, 0.1);
     padding: 20px;
     width: 100%;
     border-radius: 12px;
@@ -74,10 +74,30 @@
 /* Project description */
 .project-description {
     font-size: 1rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.911);
     margin-bottom: 10px;
 }
+/* Increase text sizes for screens wider than 1450px */
+@media (min-width: 1450px) {
+    .project-name {
+        color: rgba(255, 255, 255, 0.96);
 
+        font-size: 1.8rem;
+    }
+
+    .project-description {
+        color: rgba(255, 255, 255, 0.96);
+
+        font-size: 1.2rem;
+    }
+
+    .project-authors,
+    .project-keywords {
+        color: rgba(255, 255, 255, 0.96) !important;
+
+        font-size: 1.1rem;
+    }
+}
 /* Project authors */
 .project-authors {
     font-size: 0.9rem;
