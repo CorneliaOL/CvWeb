@@ -28,7 +28,8 @@ function Navbar() {
     return (
         <nav className={`navbar ${dynamicClass}`}>
             <div className="navbar-logo">
-                <Link to="/">MyWebsite</Link> {/* Use Link instead of <a> */}
+                <Link to="/">
+                Portfolio</Link> {/* Use Link instead of <a> */}
             </div>
             <button className="menu-toggle" onClick={toggleDropdown}>
                 ☰
