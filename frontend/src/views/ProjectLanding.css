@@ -1,5 +1,5 @@
 .app-container.projects-bg {
-    background: url('../assets/ProjectsBG.jpg') no-repeat center center fixed;
+    background: url('../assets/ProjectsBG.jpg') repeat-y center center/cover;
     background-size: cover; 
 }
 

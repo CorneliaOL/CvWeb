@@ -21,14 +21,15 @@
 
   /* Cornelia Page Background */
 .app-container.cornelia-bg {
-    background: url('../assets/corneliaBG.jpg') no-repeat center center fixed;
+    background: url('../assets/corneliaBG.jpg') repeat-y center center/cover;;
     background-size: cover;
+    
 }
 
   
   /* Lucas Page Background */
   .app-container.lucas-bg {
-    background: url('../assets/LucasBG.png') no-repeat center center fixed;
+    background: url('../assets/LucasBG.png') repeat-y center center/cover;
     background-size: cover;    
   }
 

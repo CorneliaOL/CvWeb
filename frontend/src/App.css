@@ -1,14 +1,20 @@
-/* Global styles */
-html, body, #root {
+/* Global Background Fix */
+html, body {
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-  background: url('./assets/background.jpg') no-repeat center center/cover; /* Global background */
-  background-attachment: fixed; /* Fixed effect */
+  overflow-x: hidden;
+  background: url('./assets/background.jpg') repeat center center/cover;
+  background-attachment: scroll; /* Prevents choppy fixed background on mobile */
+}
+
+/* Ensure proper height for scrolling effect */
+.app {
+  min-height: 100vh;
   background-size: cover;
-} 
+  background-repeat: repeat-y; /* Ensures seamless vertical scrolling */
+}
 
 
 
@@ -25,16 +31,6 @@ html, body, #root {
   overflow: hidden; /* Prevent scrollbars */
 }
 
-
-
-
-/* Ensure the app container is tall enough for scrolling */
-.app {
-  min-height: 200vh; /* Increase height to allow scrolling */
-  background-attachment: fixed;
-  display: flex;
-  flex-direction: column;
-}
 
 /* Ensure content takes full height */
 .app-main {
